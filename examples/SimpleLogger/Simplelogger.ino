@@ -4,10 +4,8 @@ ArduinoLogger logger;
 
 void setup() {
     Serial.begin(9600);
-    while (!Serial); // wait for serial
-
     
-    logger.setLogLevel(LOG_LEVEL_DEBUG);
+    logger.setLogLevel(LOG_LEVEL_DEBUG); // change this to INFO, WARNING, etc.
 
     logger.debug("debugging...");
     logger.info("system initialized");
@@ -16,5 +14,5 @@ void setup() {
 }
 
 void loop() {
-    // main loop code
+    // do nothing
  }

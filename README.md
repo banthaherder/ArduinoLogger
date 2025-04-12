@@ -33,10 +33,17 @@ void setup() {
 
     logger.setLogLevel(LOG_LEVEL_DEBUG); // set minimum log level to show
 
+    // plain text logs
     logger.debug("debug message");
     logger.info("system initialized");
     logger.warning("voltage low");
     logger.error("sensor failure");
+
+    // logs with parameterized data values
+    // debugf(), infof(), warningf(), errorf()
+    int sensorA = 42;
+    int sensorB = 7;
+    logger.infof("sensor values: sensorA=%d, sensorB=%d\r\n", sensorA, sensorB);
 }
 
 void loop() {
