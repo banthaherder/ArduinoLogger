@@ -7,13 +7,7 @@
 
 #include <Arduino.h>
 
-enum LogLevel {
-  LOG_LEVEL_DEBUG,
-  LOG_LEVEL_INFO,
-  LOG_LEVEL_WARN,
-  LOG_LEVEL_ERROR,
-  LOG_LEVEL_NONE
-};
+enum LogLevel { LOG_LEVEL_DEBUG, LOG_LEVEL_INFO, LOG_LEVEL_WARN, LOG_LEVEL_ERROR, LOG_LEVEL_NONE };
 
 class ArduinoLogger {
 public:
@@ -36,8 +30,7 @@ private:
   LogLevel _level;
 
   void _log(LogLevel msgLevel, const char *prefix, const char *msg);
-  void _logf(LogLevel msgLevel, const char *prefix, const char *format,
-             va_list args);
+  void _logf(LogLevel msgLevel, const char *prefix, const char *format, va_list args);
 };
 
 #endif

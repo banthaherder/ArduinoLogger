@@ -1,0 +1,4 @@
+BinPackParameters: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AlwaysBreakAfterDefinitionReturnType: None
+ColumnLimit: 120
