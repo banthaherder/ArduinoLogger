@@ -10,7 +10,7 @@
 enum LogLevel {
     LOG_LEVEL_DEBUG,
     LOG_LEVEL_INFO,
-    LOG_LEVEL_WARNING,
+    LOG_LEVEL_WARN,
     LOG_LEVEL_ERROR,
     LOG_LEVEL_NONE
 };
@@ -23,12 +23,12 @@ public:
 
     void debug(const char *msg);
     void info(const char *msg);
-    void warning(const char *msg);
+    void warn(const char *msg);
     void error(const char *msg);
 
     void debugf(const char *format, ...);
     void infof(const char *format, ...);
-    void warningf(const char *format, ...);
+    void warnf(const char *format, ...);
     void errorf(const char *format, ...);
 
 private:

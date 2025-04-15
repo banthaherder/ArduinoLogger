@@ -1,6 +1,6 @@
 # ArduinoLogger
 
-A simple Arduino logging library that supports structured logging with log levels: `DEBUG`, `INFO`, `WARNING`, and `ERROR`. Output is sent to `Serial` or any other `Stream` interface.
+A simple Arduino logging library that supports structured logging with log levels: `DEBUG`, `INFO`, `WARN`, and `ERROR`. Output is sent to `Serial` or any other `Stream` interface.
 
 ## Features
 
@@ -36,11 +36,11 @@ void setup() {
     // plain text logs
     logger.debug("debug message");
     logger.info("system initialized");
-    logger.warning("voltage low");
+    logger.warn("voltage low");
     logger.error("sensor failure");
 
     // logs with parameterized data values
-    // debugf(), infof(), warningf(), errorf()
+    // debugf(), infof(), warnf(), errorf()
     int sensorA = 42;
     int sensorB = 7;
     logger.infof("sensor values: sensorA=%d, sensorB=%d\r\n", sensorA, sensorB);

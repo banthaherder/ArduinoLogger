@@ -15,8 +15,8 @@ void ArduinoLogger::info(const char *msg) {
     _log(LOG_LEVEL_INFO, "[INFO] -", msg);
 }
 
-void ArduinoLogger::warning(const char *msg) {
-    _log(LOG_LEVEL_WARNING, "[WARN] -", msg);
+void ArduinoLogger::warn(const char *msg) {
+    _log(LOG_LEVEL_WARN, "[WARN] -", msg);
 }
 
 void ArduinoLogger::error(const char *msg) {
@@ -37,10 +37,10 @@ void ArduinoLogger::infof(const char *format, ...) {
     va_end(args);
 }
 
-void ArduinoLogger::warningf(const char *format, ...) {
+void ArduinoLogger::warnf(const char *format, ...) {
     va_list args;
     va_start(args, format);
-    _logf(LOG_LEVEL_WARNING, "[WARN] -", format, args);
+    _logf(LOG_LEVEL_WARN, "[WARN] -", format, args);
     va_end(args);
 }
 
